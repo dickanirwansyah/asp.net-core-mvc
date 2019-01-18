@@ -1,0 +1,42 @@
+@model MvcTest.Models.Product;
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width"/>
+        <title>Add</title>
+    </head>
+    <body>
+        <form method="post" asp-controller="product" asp-action="Add">
+            <table>
+                <tr>
+                    <td>Name :</td>
+                    <td>
+                        <input type="text" asp-for="Name" placeholder="enter name"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Price :</td>
+                    <td>
+                        <input type="text" asp-for="Price" placeholder="enter price"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Quantity :</td>
+                    <td>
+                        <input type="number" asp-for="Quantity" placeholder="enter quantity"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Status :</td>
+                    <td>
+                        <input type="checkbox" asp-for="Status"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="submit" name="Save" value="Save"/>
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </body>
+</html>
